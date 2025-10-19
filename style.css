@@ -1,201 +1,212 @@
-/* 全局样式重置与基础设置 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', 'Microsoft YaHei', sans-serif;
-}
-
-body {
     background-color: #F5F7FA; /* 主色调：浅灰蓝，清新简约 */
-    color: #333333; /* 正文深灰色，提升可读性 */
-    line-height: 1.6;
-}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张天颖的个人主页</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- 装饰元素：背景圆点 -->
+    <div class="bg-decor dot1"></div>
+    <div class="bg-decor dot2"></div>
+    <div class="bg-decor dot3"></div>
 
-/* 容器样式（控制内容宽度，居中显示） */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
+    <!-- 头部导航 -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="title-decor">
+                    <span class="circle"></span>
+                    <h1 class="site-title">张天颖的个人主页</h1>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#home" class="nav-link">首页</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">关于我</a></li>
+                        <li class="nav-item"><a href="#hobbies" class="nav-link">兴趣爱好</a></li>
+                        <li class="nav-item"><a href="#learning" class="nav-link">学习动态</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-/* 头部导航样式 */
-.header {
-    background-color: #FFFFFF;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    padding: 16px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+    <!-- 主要内容区 -->
+    <main class="main">
+        <!-- 首页banner -->
+        <section id="home" class="banner">
+            <div class="container">
+                <div class="banner-content">
+                    <p class="banner-text">欢迎来到我的个人网站</p>
+                    <p class="banner-subtext">一起了解我的生活与学习～</p>
+                    <div class="scroll-indicator">
+                        <span>向下滚动</span>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- 波浪分隔线 -->
+            <div class="wave-divider"></div>
+        </section>
 
-.site-title {
-    font-size: 22px;
-    color: #4A90E2; /* 辅助色：淡蓝，突出标题 */
-    margin-bottom: 12px;
-}
+        <!-- 关于我模块 -->
+        <section id="about" class="about section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="title-icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                    关于我
+                </h2>
+                <div class="about-content">
+                    <div class="about-photo">
+                        <div class="photo-frame">
+                            <!-- 可替换为个人照片 -->
+                            <div class="placeholder-img"></div>
+                        </div>
+                    </div>
+                    <div class="about-details">
+                        <p class="about-item"><i class="fa fa-user-circle-o" aria-hidden="true"></i> 姓名：张天颖</p>
+                        <p class="about-item"><i class="fa fa-calendar-o" aria-hidden="true"></i> 年龄：21岁</p>
+                        <p class="about-item"><i class="fa fa-graduation-cap" aria-hidden="true"></i> 身份：在读大学生</p>
+                        <p class="about-item"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> 个人特质：喜欢探索各个领域的知识，具备创造力，乐于尝试新事务并将想法付诸实践</p>
+                        <div class="decor-line"></div>
+                        <p class="about-quote">"保持好奇，持续探索，让想法照进现实"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-.nav-list {
-    list-style: none;
-    display: flex; /* 使用Flexbox布局，实现导航横向排列 */
-    gap: 24px;
-}
+        <!-- 兴趣爱好模块 -->
+        <section id="hobbies" class="hobbies section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="title-icon"><i class="fa fa-heart" aria-hidden="true"></i></span>
+                    兴趣爱好
+                </h2>
+                <div class="hobbies-list">
+                    <!-- 音乐爱好 -->
+                    <div class="hobby-card">
+                        <div class="hobby-icon">
+                            <div class="icon-bg">
+                                <i class="fa fa-music" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <h3 class="hobby-title">音乐</h3>
+                        <p class="hobby-desc">擅长乐器：吉他、钢琴，闲暇时喜欢弹奏轻音乐放松心情</p>
+                        <div class="hobby-tags">
+                            <span class="tag">吉他</span>
+                            <span class="tag">钢琴</span>
+                            <span class="tag">轻音乐</span>
+                        </div>
+                    </div>
+                    <!-- 运动爱好 -->
+                    <div class="hobby-card">
+                        <div class="hobby-icon">
+                            <div class="icon-bg">
+                                <i class="fa fa-table-tennis" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <h3 class="hobby-title">运动</h3>
+                        <p class="hobby-desc">常参与的运动：羽毛球、乒乓球，喜欢通过运动保持活力</p>
+                        <div class="hobby-tags">
+                            <span class="tag">羽毛球</span>
+                            <span class="tag">乒乓球</span>
+                            <span class="tag">活力</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-.nav-link {
-    text-decoration: none;
-    color: #666666; /* 导航文字中灰色 */
-    font-size: 15px;
-    padding-bottom: 4px;
-    transition: all 0.3s ease; /* 过渡效果，提升交互体验 */
-}
+        <!-- 学习动态模块 -->
+        <section id="learning" class="learning section">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="title-icon"><i class="fa fa-book" aria-hidden="true"></i></span>
+                    学习动态
+                </h2>
+                <div class="learning-content">
+                    <div class="learning-card">
+                        <div class="learning-icon">
+                            <i class="fa fa-code" aria-hidden="true"></i>
+                        </div>
+                        <div class="learning-text">
+                            <h3>正在学习</h3>
+                            <p>Web Programming（网页编程）</p>
+                        </div>
+                    </div>
+                    <div class="learning-card">
+                        <div class="learning-icon">
+                            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="learning-text">
+                            <h3>学习背景</h3>
+                            <p>作为兴趣爱好的拓展，探索网页制作的乐趣</p>
+                        </div>
+                    </div>
+                    <div class="learning-card">
+                        <div class="learning-icon">
+                            <i class="fa fa-rocket" aria-hidden="true"></i>
+                        </div>
+                        <div class="learning-text">
+                            <h3>学习目标</h3>
+                            <p>掌握HTML、CSS等核心技术，希望能为未来的专业学习提供助力</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-.nav-link:hover {
-    color: #4A90E2;
-    border-bottom: 2px solid #4A90E2; /* hover时显示淡蓝色下划线 */
-}
+    <!-- 底部信息 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">© 2025 张天颖的个人主页</p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a href="#" class="footer-link"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                </div>
+                <p class="footer-reference">参考资料：B站CS50W视频、GitHub Pages发布教程</p>
+            </div>
+        </div>
+    </footer>
 
-/* 主要内容区通用样式 */
-.main {
-    padding: 30px 0;
-}
+    <!-- 回到顶部按钮 -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </button>
 
-.section {
-    margin-bottom: 60px;
-    background-color: #FFFFFF;
-    border-radius: 8px;
-    padding: 30px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
-}
+    <script>
+        // 回到顶部功能
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
 
-.section-title {
-    font-size: 20px;
-    color: #4A90E2;
-    margin-bottom: 24px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #F0F2F5;
-}
-
-/* Banner区域样式 */
-.banner {
-    background-color: #4A90E2;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 60px 0;
-    border-radius: 8px;
-    margin-bottom: 60px;
-}
-
-.banner-text {
-    font-size: 18px;
-    font-weight: 500;
-}
-
-/* 关于我模块样式 */
-.about-content {
-    display: grid; /* 使用Grid布局，实现个人信息分行排列 */
-    gap: 16px;
-}
-
-.about-item {
-    font-size: 16px;
-    color: #666666;
-}
-
-.about-item i {
-    color: #4A90E2;
-    margin-right: 12px;
-    font-size: 18px;
-}
-
-/* 兴趣爱好模块样式 */
-.hobbies-list {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap; /* 响应式：屏幕变小时自动换行 */
-}
-
-.hobby-card {
-    flex: 1;
-    min-width: 280px;
-    background-color: #F9FAFC;
-    border-radius: 8px;
-    padding: 24px;
-    text-align: center;
-    transition: transform 0.5s ease; /* 过渡效果，hover时上浮 */
-}
-
-.hobby-card:hover {
-    transform: translateY(-5px); /* hover时轻微上浮5px */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-}
-
-.hobby-icon {
-    font-size: 36px;
-    color: #4A90E2;
-    margin-bottom: 16px;
-}
-
-.hobby-title {
-    font-size: 18px;
-    margin-bottom: 12px;
-    color: #333333;
-}
-
-.hobby-desc {
-    font-size: 15px;
-    color: #666666;
-}
-
-/* 学习动态模块样式 */
-.learning-content {
-    display: grid;
-    gap: 16px;
-}
-
-.learning-item {
-    font-size: 16px;
-    color: #666666;
-}
-
-.learning-item i {
-    color: #4A90E2;
-    margin-right: 12px;
-    font-size: 18px;
-}
-
-/* 底部样式 */
-.footer {
-    background-color: #FFFFFF;
-    padding: 24px 0;
-    border-top: 1px solid #F0F2F5;
-}
-
-.footer-text {
-    font-size: 14px;
-    color: #999999;
-    text-align: center;
-}
-
-/* 响应式适配（针对手机等小屏幕） */
-@media (max-width: 768px) {
-    .nav-list {
-        gap: 16px;
-    }
-
-    .site-title {
-        font-size: 20px;
-    }
-
-    .section {
-        padding: 20px;
-    }
-
-    .banner {
-        padding: 40px 0;
-    }
-
-    .banner-text {
-        font-size: 16px;
-    }
-}
+        // 平滑滚动导航
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
